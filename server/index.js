@@ -217,9 +217,9 @@ cron.schedule('40 15 * * *', async () => {
 //     }
 // });
 
-app.use(express.static(join(__dirname, '../my-app/dist')));
+app.use(express.static(join(__dirname, '../dist')));
 app.get('*',(req,res)=>{
-    res.sendFile(join(__dirname, '../my-app/dist/index.html'))
+    res.sendFile(join(__dirname, '../dist/index.html'))
 })
 
 
